@@ -1,0 +1,17 @@
+# Local development dependencies go here
+-r base.txt
+coverage==3.6
+django-discover-runner==0.4
+django-debug-toolbar==0.9.4
+Sphinx==1.2b1
+
+selenium==2.33.0
+
+# This is not necessary. We don't use caching heavily yet
+# so filesystem is fine (for now).
+
+#python-memcached==1.53
+#pylibmc==1.2.3
+#django-pylibmc-sasl==0.2.4
+
+# TODO heroku is using this requirements file, make it use prod and move pylibmc et al

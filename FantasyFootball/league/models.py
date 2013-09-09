@@ -2,8 +2,7 @@ from django.db import models
 from django.core.urlresolvers import reverse
 
 from django.contrib.auth.models import User
-from player.models import NflPlayer, NflSpecialTeam
-from core.models import FieldPosition
+from nfl.models import NflPlayer, NflSpecialTeam, FieldPosition
 
 
 class FantasyPlayer(models.Model):

@@ -1,26 +1,8 @@
 from rest_framework import viewsets
 
 from django.contrib.auth.models import User, Group, Permission
-from .models import NflTeam, FieldPosition
 
-from .serializers import NflTeamSerializer, FieldPositionSerializer, UserSerializer, GroupSerializer, PermissionSerializer
-
-class NflTeamViewSet(viewsets.ModelViewSet):
-
-    """
-    API endpoint that allows NFL Teams to be viewed or edited.
-    """
-    queryset = NflTeam.objects.all()
-    serializer_class = NflTeamSerializer
-
-
-class FieldPositionViewSet(viewsets.ModelViewSet):
-
-    """
-    API endpoint that allows Field Positions to be viewed or edited.
-    """
-    queryset = FieldPosition.objects.all()
-    serializer_class = FieldPositionSerializer
+from .serializers import UserSerializer, GroupSerializer, PermissionSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):

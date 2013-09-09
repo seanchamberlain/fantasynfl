@@ -1,26 +1,6 @@
 from rest_framework import serializers
 
 from django.contrib.auth.models import User, Group, Permission
-from .models import NflTeam, FieldPosition
-
-class NflTeamSerializer(serializers.HyperlinkedModelSerializer):
-
-    url = serializers.HyperlinkedIdentityField(
-        view_name='nflteam-detail')
-    stringified = serializers.Field(source='__unicode__')
-
-    class Meta:
-        model = NflTeam
-
-
-class FieldPositionSerializer(serializers.HyperlinkedModelSerializer):
-
-	url = serializers.HyperlinkedIdentityField(
-		view_name='fieldposition-detail')
-	stringified = serializers.Field(source='__unicode__')
-
-	class Meta:
-		model = FieldPosition
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):

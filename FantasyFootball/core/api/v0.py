@@ -5,11 +5,11 @@ from django.conf.urls import patterns, include, url
 
 import core.urls
 import league.urls
-import player.urls
+import nfl.urls
 
 
 urlpatterns = patterns('',
                        url(r'^core/', include(core.urls)),
                        url(r'^league/', include(league.urls)),
-                       url(r'^player/', include(player.urls)),
+                       url(r'^nfl/', include(nfl.urls)),
                        )

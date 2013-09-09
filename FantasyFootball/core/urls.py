@@ -7,12 +7,10 @@ except ImportError:  # django < 1.4
 
 from rest_framework import routers
 
-from .views import NflTeamViewSet, FieldPositionViewSet, UserViewSet, PermissionViewSet, GroupViewSet
+from .views import UserViewSet, PermissionViewSet, GroupViewSet
 
 
 core_router = routers.DefaultRouter(trailing_slash=False)
-core_router.register(r'nflteam', NflTeamViewSet)
-core_router.register(r'fieldposition', FieldPositionViewSet)
 core_router.register(r'user', UserViewSet)
 core_router.register(r'permission', PermissionViewSet)
 core_router.register(r'group', GroupViewSet)
